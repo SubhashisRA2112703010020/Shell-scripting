@@ -1,0 +1,33 @@
+Command for question 1 
+Step1- Use nano command  
+nano test.sh
+Step2- Feed the necessary information according to the question 
+#!/bin/bash
+mkdir -p Test/Test1/Test2
+mkdir -p Test/Test1/test3
+touch Test/file.txt
+cp Test/file.txt Test/Test1/Test2/
+cp Test/file.txt Test/Test1/Test3/
+rm -r Test/Test1/Test2
+echo "Done"
+Step3- Use crtl+x ,click y then click enter, then use bash command  
+bash test.sh
+
+Command for question 2
+Step1- Again use nano command 
+nano systeminfo.sh
+#!/bin/bash
+#Create file named Syteminfo
+touch Systeminfo
+#Check available storage in the system
+storage=$(df -h | awk 'NR==2{print $3}')
+#Check available memory (RAM) in the system
+memeory=$(free -m | awk 'NR==2{print $4}')
+#Check the operating system
+os=$(uname)
+#Put all the information in the file
+echo "Available storage: $storage" >> Systeminfo
+echo "Available memory (RAM): $memory MB" >> Systeminfo
+#Print the contents of the file
+cat Systeminfo
+bash systeminfo.sh
