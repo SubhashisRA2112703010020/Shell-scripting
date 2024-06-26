@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "choose colour from Red, Green, Blue, Orange"
+
+read colour
+if[$color == Red]
+then 
+   echo "Stop"
+elif[$color == Yellow]
+then
+   echo "Prepare to Stop"
+elif[$color == Green]
+then 
+    echo "Go"
+else
+    echo "Invalid Color"
+fi
